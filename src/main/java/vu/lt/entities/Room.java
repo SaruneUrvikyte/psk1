@@ -25,6 +25,13 @@ public class Room implements Serializable {
     @Column(name = "NO")
     private String no;
 
+    @Column(name = "NUMBER_OF_VISITORS")
+    private Integer numberOfVisitors;
+
+    @Version
+    @Column(name = "OPT_LOCK_VERSION")
+    private Integer version;
+
     @ManyToOne
     @JoinColumn(name="HOTEL_ID")
     private Hotel hotel;

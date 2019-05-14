@@ -17,4 +17,12 @@ public class RoomsDAO {
     public void persist(Room room){
         this.em.persist(room);
     }
+
+    public Room findOne(Integer id){
+        return em.find(Room.class, id);
+    }
+
+    public Room update(Room room){
+        return em.merge(room);
+    }
 }
